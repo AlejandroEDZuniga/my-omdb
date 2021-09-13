@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import store from "./redux/store"
+import { Provider } from "react-redux";
+import App from "./routes/App";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <h1>Open Movie Data Base</h1>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById("root")
 );
